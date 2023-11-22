@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<title>Layouts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale-1">
+		<style type="text/css"></style>
+<style>
+       * {
+       box-sizing: border-box;
+   		}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+     }
+     /* Style the header */
+     header {
+      background: #777;
+      padding: 20px;
+      text-align: center;
+      font-size: 25px;
+      color: white;
+   }
+     /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 30%;
+       height: 650px; /* only for demonstration, should be removed */
+       background: #ccc;
+      padding: 20px;
+  }
+    /* Style the list inside the menu */
+    nav ul {
+       list-style-type: none;
+      padding: 0;
+      }
+
+	article {
+ 	 float: left;
+	  padding: 20px;
+	  width: 70%;
+ 	 background-color: #f1f1f1;
+ 	 height: 650px; /* only for demonstration, should be removed */
+ 	}
+ /* Clear floats after the columns */
+	section::after {
+	  content: "";
+ 	 display: table;
+ 	  clear: both;
+	 }
+ /* Style the footer */
+ 	footer {
+	  background-color: #777;
+ 	 padding: 10px;
+ 	 text-align: center;
+ 	  color: white;
+ 	}
+ /* Responsive layout - makes the two columns/boxes stack on top ofeach other instead of next to each other, on small screens */
+	@media (max-width: 600px) {
+ 	  nav, article {
+ 	   width: 100%;
+ 	   height: auto;
+ 	  }
+	}
+</style>
+	</head>
+
+	<body>
+		
+		<header>
+			<h2>Titulo da pagina</h2>
+
+		</header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="06homepage.html">Inicio</li>	
+					<li><a href="./formulario.html">Contato</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					
+				</ul>
+			</nav>
+
+			<article>
+				
+				<h1>Titulo artigo</h1>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel mauris dui. Donec vitae nulla viverra, bibendum justo vel, convallis enim. Fusce egestas, nunc eget tincidunt faucibus, velit felis luctus purus, vel malesuada ante nisi eu erat. Cras erat lectus, ornare ac tortor eu, finibus feugiat arcu. Curabitur laoreet, risus sed gravida auctor, turpis mauris lacinia elit, at lacinia nisi justo nec dui. Sed vel sapien at felis fringilla vehicula. Maecenas dictum, enim at fringilla malesuada, felis nulla ornare justo, non euismod ex metus eget nulla. Integer aliquet risus velit.
+
+				Morbi sed diam purus. Ut ullamcorper fringilla nunc, et porta leo imperdiet sed. Ut non dolor et tortor blandit finibus eu ac mi. Integer congue, diam sit amet scelerisque tincidunt, sem justo cursus diam, ut pulvinar dui arcu id ante. Nunc ipsum justo, finibus et ultricies eu, pulvinar vitae justo. Fusce rutrum vel orci id rutrum. Morbi dapibus nisi ligula, dictum fringilla dui sollicitudin eu. Sed dapibus faucibus velit non finibus.</p>
+
+				<p>Proin nec dictum sem, congue ultrices tortor. Vestibulum in magna libero. Integer diam metus, iaculis pretium tempus eget, viverra et ante. Donec a elit eros. Quisque maximus ultricies eros ut vestibulum. Sed tristique, lectus in tempus efficitur, massa justo fermentum felis, tincidunt hendrerit ex odio eu lectus. Duis sem magna, pharetra vitae lacus et, cursus interdum felis. Duis porttitor, est eget tincidunt mattis, felis augue rutrum dolor, at convallis ipsum leo vel mauris. Sed aliquam metus sed felis tincidunt, et bibendum libero elementum. Quisque erat nisi, porta et egestas non, luctus et quam. Integer elementum elementum tellus, ut finibus sapien dapibus vel.</p>
+
+			</article>
+
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Nicolas De Rossi</p>
+		</footer>
+	</body>
+</html>
+
+
