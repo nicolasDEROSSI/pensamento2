@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<title>HTML - Layouts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale-1">
+		<style type="text/css"></style>
+<style>
+   * {
+      box-sizing: border-box;
+   	}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+     }
+
+     [type="text"], [type="email"], textarea {
+     	margin-bottom: 5px;
+     }
+
+     /* Style the header */
+     header {
+      background: #777;
+      padding: 15px;
+      text-align: center;
+      font-size: 25px;
+      color: white;
+   }
+     /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 30%;
+      height: 500px; /* only for demonstration, should be removed */
+      background: #ccc;
+      padding: 20px;
+  }
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      }
+
+	article {
+ 	 float: left;
+	 padding: 20px;
+	 width: 70%;
+ 	 background-color: #f1f1f1;
+ 	 height: 500px; /* only for demonstration, should be removed */
+ 	}
+ /* Clear floats after the columns */
+	section::after{
+	  content: "";
+ 	  display: table;
+ 	  clear: both;
+	 }
+ /* Style the footer */
+ 	footer {
+	  background-color: #777;
+ 	 padding: 10px;
+ 	 text-align: center;
+ 	  color: white;
+ 	}
+ /* Responsive layout - makes the two columns/boxes stack on top ofeach other instead of next to each other, on small screens */
+	@media (max-width: 600px) {
+ 	  nav, article {
+ 	   width: 100%;
+ 	   height: auto;
+ 	  }
+	}
+</style>
+	</head>
+
+	<body>
+		
+		<header>
+			<h2>Curso Front-End HTML</h2>
+
+		</header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="06homepage.html">Inicio</li>
+					<li><a href="Layout.html">Voltar</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+				
+
+				</ul>
+			</nav>
+
+			<article>
+				<h1>Contato</h1>
+				<p>Preencha os campos abaixo</p>
+				
+				<form method="post">
+					<div>
+						<label for="nome">nome</label><br>
+						<input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+					</div>
+					<div>
+						<label for="email">E-mail</label><br>
+						<input type="email" name="email" id="email" placeholder="Digite seu E-mail">
+					</div>
+					<div>
+						<label for="mensagem">Mensagem</label><br>
+						<textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+					</div>
+					<div>
+					<p>
+						<label>Quais linguagens voce prefere?</label>
+						<input type="radio" name="linguagens" value="html"> HTML
+						<input type="radio" name="linguagens" value="css"> CSS
+						<input type="radio" name="linguagens" value="javascript"> JavaScript
+					</p>
+					</div>
+					<div>
+					<p>
+						<label>Quais linguagens voce sabe?</label>
+						<input type="checkbox" name="linguagens" value="html"> HTML
+						<input type="checkbox" name="linguagens" value="css"> CSS
+						<input type="checkbox" name="linguagens" value="javascript"> JavaScript
+					</p>
+					</div>
+
+					<div>
+
+					<label>Qual sua cor favorita?</label>
+
+					<select>
+						<option value="azul" selected>Azul</option>
+						<option value="preto">Preto</option>
+						<option value="vermelho">vermelho</option>
+						<option value="ciano">ciano</option>
+					</select>
+					</div><br>
+
+					<div>
+						<input type="submit" name="">
+					</div>
+
+				</form>
+
+			</article>
+
+		</section>
+		<footer>
+			<p>Desenvolvido por Nicolas De Rossi</p>
+		</footer>
+	</body>
+</html>
+
